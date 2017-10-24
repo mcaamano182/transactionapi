@@ -23,7 +23,7 @@ public class UserController extends GenericController<User>{
 		
 		put(USERS_URL, (req, res) -> update(req,res));
 		
-		spark.Spark.delete(USERS_URL, (req, res) -> delete(req,res));
+		spark.Spark.delete(USERS_URL + ID_PARAM_URL, (req, res) -> delete(req,res));
 	}
 
 }
